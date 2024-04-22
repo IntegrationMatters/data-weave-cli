@@ -12,14 +12,12 @@ jobs:
   RELEASE_EXTENSION:
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest]
         include:
           - os: windows-latest
             script_name: windows
           - os: ubuntu-latest
             script_name: linux
-          - os: macos-latest
-            script_name: osx
 
     runs-on: ${{ matrix.os }}
     # Steps represent a sequence of tasks that will be executed as part of the job
